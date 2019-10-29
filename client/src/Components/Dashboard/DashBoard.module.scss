@@ -1,0 +1,42 @@
+@import '../../assets/Scss/variables.scss';
+@import '../../Components/FormContainer/Form.module.scss';
+
+.portfolioImg {
+	border-radius: 50%;
+	width: 120px;
+	box-shadow: 0 0 3px $gray;
+}
+.error {
+	padding: 1% 5%;
+	margin: 2% auto;
+	width: 80%;
+	color: $redOrange;
+	background: rgba($gray, 0.4);
+}
+input[type='file'] {
+	border: 1px solid $gray;
+	position: relative;
+	&::-webkit-file-upload-button {
+		visibility: hidden;
+	}
+	&::before {
+		content: 'Select Your Photo';
+		background-color: $white;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 100%;
+		text-align: center;
+		padding: 15px;
+	}
+}
+.blackBg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba($color: #000000, $alpha: .7);
+	z-index: 8;
+}

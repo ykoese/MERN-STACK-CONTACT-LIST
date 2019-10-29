@@ -1,0 +1,90 @@
+@import '../../assets/Scss/variables.scss';
+
+.containerForm {
+	color: $black;
+	font-size: 18px;
+	width: 30%;
+	min-width: 500px;
+	margin: 5% auto;
+	padding: 2%;
+	border-radius: 5px;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+	background: linear-gradient(to bottom, #f2fcfe, #1c92d2);
+
+	h1 {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 35px;
+		margin: 0;
+		img {
+			width: 60px;
+			padding: 8px;
+			color: $black;
+		}
+	}
+	.error {
+		padding: 1% 5%;
+		margin: 2% auto;
+		width: 80%;
+		color: $redOrange;
+		background: rgba($gray, 0.4);
+	}
+	form {
+		display: flex;
+		flex-direction: column;
+		padding: 5%;
+		input {
+			padding: 15px 15px 15px 60px;
+			margin: 8px;
+			font-size: 16px;
+			border: none;
+			border-radius: 5px;
+			&:focus {
+				outline: none;
+			}
+			&[type='submit'] {
+				width: 25%;
+				margin: 10px auto;
+				background-color: $white;
+				color: $black;
+				border: none;
+				font-size: 18px;
+				padding-left: 15px;
+				cursor: pointer;
+			}
+		}
+		label {
+			padding: 8px;
+			display: none;
+		}
+		.inputImg {
+			position: relative;
+			top: 44px;
+			left: 25px;
+			width: 22px;
+		}
+	}
+	p {
+		text-align: center;
+		margin: 0;
+		a {
+			color: $white;
+			text-decoration: none;
+		}
+	}
+}
+@media (max-width: 800px) {
+	.containerForm {
+		width: 90%;
+		min-width: unset;
+		font-size: 16px;
+		h1 {
+			font-size: 22px;
+			img {
+				width: 40px;
+			}
+		}
+	}
+}

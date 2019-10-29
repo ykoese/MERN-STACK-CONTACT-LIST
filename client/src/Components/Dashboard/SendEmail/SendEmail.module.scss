@@ -1,0 +1,36 @@
+@import '../../../assets/Scss/variables.scss';
+@import '../../FormContainer/Form.module.scss';
+
+.containerForm {
+	position: absolute;
+	top: 7%;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: $white;
+	z-index: 9;
+	h1 {
+		font-size: 25px;
+		img {
+			width: 80px;
+		}
+	}
+	form {
+		textarea {
+			padding: 15px;
+			margin: 8px;
+			min-height: 100px;
+			font-size: 16px;
+			border: 1px solid $gray;
+			resize: none;
+			&:focus {
+				outline: none;
+			}
+		}
+	}
+}
+
+input[type='file'] {
+	&::before {
+		content: 'Attache your file';
+	}
+}
